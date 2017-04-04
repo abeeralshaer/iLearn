@@ -1,20 +1,11 @@
-import React from 'react';
-import LearnList from './LearnList.js';
+const React = require('react')
+const ReactDOM = require('react-dom')
+const Ilearn = require('./ilearn')
 
-class Ilearn extends React.Component {
-        constructor() {
-            super();
-        }
-        render() {
-            const learnList = [{
-              tech: 'Java',
-              docs:'http://www.Java.com'
-            },
-          {
-            tech:'ASP.net',
-            docs:'http://www.ASP.com'
-          }]
-            return (<div><LearnList learnList={learnList} /></div>)
-            }
-        }
-        export default Ilearn;
+const render = () => {
+  ReactDOM.render(
+      <Ilearn/>,
+      document.getElementById('app')
+  )
+}
+render()

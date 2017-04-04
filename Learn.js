@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 class Learn extends React.Component {
-  onRemoveClick(){
+  onRemoveClick () {
     this.props.onRemove(this.props.tech)
   }
 
-  render(){
-    return ( <tr>
+  render () {
+    return (<tr>
       <td>{this.props.tech}</td>
       <td><a href={this.props.children}>{this.props.children}</a></td>
       <td>
@@ -17,6 +17,6 @@ class Learn extends React.Component {
         </button>
       </td>
     </tr>)
+  }
 }
-}
-export default Learn ;
+export default Learn
