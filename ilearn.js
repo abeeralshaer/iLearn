@@ -14,7 +14,7 @@ class Ilearn extends React.Component {
       tech: 'ASP.net',
       docs: 'http://www.ASP.com'
     }]
-    return (<div><LearnList learnList={learnList} /></div>)
+    return (<LearnList learnList={learnList} />)
   }
 }
 module.exports = Ilearn

@@ -1,15 +1,14 @@
-# iLearn
+# **iLearn**
 
-## Intro
-
-This exercise assumes that your already know React basics.
+![alt text](https://camo.githubusercontent.com/0cd910e76658429374539a8d72a0608783918aae/68747470733a2f2f7261776769742e636f6d2f676f72616e67616a69632f72656163742d69636f6e732f6d61737465722f72656163742d69636f6e732e737667 "React")
 
 ## Challenge!
 
-The main objective of this exercise is to create an application from scratch: **iDesire**!
-iDesire is a wishlist where you can add all the personal things you would like to have in a long term. For example, "Car" or "Computer".
+The main objective of this exercise is to create an application using **React** from scratch : **iLearn** !
+iLearn is a wishlist where you can add all the Languages you would like to Learn in a long term. For example, "Java" or "ASP.NET".
 
-### Requirements
-* You should be able to do the CRUD (Create, Read, Update, Delete) operations for your desires.
-* It may be possible to select more than one item from the desires list and delete them.
-* You should be able to enter to a sub page where its possible to see the details of the item, with an image and a description.
+### Tips
+
+1. install modules use : ``` npm i```
+2. to run server use command : ``` ./node_module.bin/webpack-dev-server --content-base build/ ```
+3. to browse the site go to : ```http://localhost:8080 ```

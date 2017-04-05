@@ -60,7 +60,8 @@ class LearnList extends React.Component {
       )
     }, this)
 
-    return (<div>
+    return (<div className="main">
+            <h1>Ilearn Wishlist</h1>
                 <div>
                 <div className = 'form-group'>
                 <label htmlFor = "name" > Tech </label> <input
