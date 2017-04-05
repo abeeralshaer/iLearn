@@ -13,16 +13,6 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/
-    }, {
-      test: /\.js?$/,
-      exclude: /node_modules/,
-      include: [
-        path.join(__dirname, '/')
-      ],
-      use: ['babel-loader']
-    }, {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader'
     },
     {
       test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,

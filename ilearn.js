@@ -1,6 +1,5 @@
 import React from 'react'
 import LearnList from './LearnList.js'
-require('./style.css')
 
 class Ilearn extends React.Component {
   constructor () {
