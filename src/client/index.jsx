@@ -1,10 +1,10 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
-const Ilearn = require('./ilearn')
+const Ilearn = require('./ilearn.jsx')
 
 const render = () => {
   ReactDOM.render(
-      <Ilearn/>,
+    <Ilearn/>,
       document.getElementById('app')
   )
 }

@@ -1,16 +1,17 @@
+/* eslint-disable */
 var path = require('path')
 module.exports = {
-  entry: './index.js',
+  entry: './src/client/index.jsx',
   devServer: {
     inline: true
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '/public/build'),
     filename: 'bundle.js'
   },
   module: {
     loaders: [{
-      test: /\.js$/,
+      test: /\.jsx$/,
       loader: 'babel-loader',
       exclude: /node_modules/
     },

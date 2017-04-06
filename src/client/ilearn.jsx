@@ -1,5 +1,5 @@
 import React from 'react'
-import LearnList from './LearnList.js'
+import LearnList from './LearnList.jsx'
 
 class Ilearn extends React.Component {
   constructor () {

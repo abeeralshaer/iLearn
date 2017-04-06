@@ -1,5 +1,5 @@
 import React from 'react'
-import Learn from './Learn.js'
+import Learn from './Learn.jsx'
 
 class LearnList extends React.Component {
   constructor (props) {
@@ -63,8 +63,8 @@ class LearnList extends React.Component {
     return (<div className="main">
             <h1>Ilearn Wishlist</h1>
                 <div>
-                <div className = 'form-group'>
-                <label htmlFor = "name" > Tech </label> <input
+                  <div className = 'form-group'>
+                  <label htmlFor = "name" > Tech </label> <input
                 value = {
                     this.state.tech
                 }
