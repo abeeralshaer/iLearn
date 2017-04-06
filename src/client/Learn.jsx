@@ -1,22 +1,23 @@
 import React from 'react'
 
-class Learn extends React.Component {
-  onRemoveClick () {
-    this.props.onRemove(this.props.tech)
-  }
+const Learn = (props)=>{
 
-  render () {
-    return (<tr>
-      <td>{this.props.tech}</td>
-      <td><a href={this.props.children}>{this.props.children}</a></td>
-      <td>
-        <button type='button' className='close'
-        onClick={this.onRemoveClick.bind(this)}
-        >
-          <span>&times;</span>
-        </button>
-      </td>
-    </tr>)
-  }
+  return (<tr>
+    <td>{props.tech}</td>
+    <td><a href={props.docs}>{props.docs}</a></td>
+    <td>
+      <button type='button' className='close'
+      onClick={()=>props.onRemove(props.tech)}
+      >
+        <span>&times;</span>
+      </button>
+    </td>
+  </tr>)
+
+}
+Learn.propTypes ={
+  onRemove:React.PropTypes.func,
+  tech :React.PropTypes.string,
+  docs :React.PropTypes.string
 }
 export default Learn
