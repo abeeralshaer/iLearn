@@ -1,7 +1,6 @@
 import React from 'react'
 import Learn from './Learn.jsx'
 
-
 class LearnList extends React.Component {
   constructor (props) {
     super(props)
@@ -9,7 +8,9 @@ class LearnList extends React.Component {
     this.state = {
       learnList: this.props.learnList,
       tech: '',
-      docs: ''
+      docs: '',
+
+
     }
   }
 
@@ -31,7 +32,8 @@ class LearnList extends React.Component {
     this.setState({
       learnList: this.state.learnList,
       tech: '',
-      docs: ''
+      docs: '',
+
     })
   }
   removeTech (tech) {
@@ -43,6 +45,7 @@ class LearnList extends React.Component {
   }
 
   render () {
+    const {addTech, removeTech} = this.props
     const learns = this.state.learnList.map(function (learn) {
       return (<
                     Learn tech = {
@@ -55,7 +58,7 @@ class LearnList extends React.Component {
                         learn.docs
                     }
                     onRemove = {
-                        this.removeTech.bind(this)
+                        removeTech
                     } >
         {
                         learn.docs
@@ -63,7 +66,6 @@ class LearnList extends React.Component {
                     /Learn>
       )
     }, this)
-
     return (<div className="main">
       <h1>Ilearn Wishlist</h1>
       <div>
@@ -95,7 +97,7 @@ class LearnList extends React.Component {
          className = 'form-group'>
           <button className = 'btn btn-default'
                 onClick = {
-                    this.addTech.bind(this)
+                    addTech
                 }>
                 Add </button>
         </div> </div> <table

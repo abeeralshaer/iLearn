@@ -1,14 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Ilearn from './ilearn.jsx'
-import store from './reduxes.jsx'
+import store from './store/configstore.jsx'
+import LearnList from './LearnList.jsx'
+
+  const learnList = [{
+    tech: 'Java',
+    docs: 'http://www.Java.com'
+  },
+  {
+    tech: 'ASP.net',
+    docs: 'http://www.ASP.com'
+  }]
+
+
 const render = () => {
   ReactDOM.render(
-    <Ilearn
-      techs={store.getState().techs}
-      onAdd={tech => store.dispatch({ type: 'ADD_TECH', payload: tech })}
-      onRemove={name => store.dispatch({ type: 'REMOVE_TECH', payload: name })}/>,
-      // eslint-disable-next-line
+    <LearnList learnList={learnList} addTech={tech => store.dispatch({ type: 'ADD_TECH',payload:'tech'})}
+     removeTech={name => store.dispatch({ type: 'REMOVE_TECH', payload:'dfj'  })}  />,
       document.getElementById('app')
   )
 }
