@@ -7,8 +7,9 @@ const render = () => {
     <Ilearn
       techs={store.getState().techs}
       onAdd={tech => store.dispatch({ type: 'ADD_TECH', payload: tech })}
-      onRemove={name => store.dispatch({ type: 'REMOVE_TECH', payload: name })}/>,
-      // eslint-disable-next-line
+      onRemove={techName => store.dispatch({ type: 'REMOVE_TECH', payload: techName })}/>,
+    //ignore document
+// eslint-disable-next-line no-document 
       document.getElementById('app')
   )
 }
