@@ -5,7 +5,8 @@ class LearnForm extends React.Component {
     super(props)
 
     this.state = {
-      tech :''
+      tech :'',
+      docs:''
     }
   }
 
@@ -26,7 +27,18 @@ class LearnForm extends React.Component {
               id='Tech'  />
         </div>
         <div className='form-group'>
-          <button  className='btn btn-default' onClick={()=>this.props.onAdd(this.state.tech)}>
+          <label>Docs</label>
+          <input
+              ref ={node => {input = node}}
+              onChange={(e)=>{this.setState({docs:e.target.value})}}
+              placeholder='Docs'
+              type='text'
+              className='form-control'
+              id='Docs'  />
+        </div>
+
+        <div className='form-group'>
+          <button  className='btn btn-default' onClick={()=>this.props.onAdd(this.state.tech,this.state.docs)}>
             Add
             </button>
         </div>

@@ -8,7 +8,7 @@ const Learn = ({tech,docs,onRemove})=>{
       <td><a href={docs}>{docs}</a></td>
       <td>
         <button type='button' className='close'
-      onClick={onRemove}
+      onClick={()=>onRemove()}
       >
           <span>&times;</span>
         </button>

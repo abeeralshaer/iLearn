@@ -1,7 +1,9 @@
-export const addTech = (tech) =>(
+export const addTech = (tech,docs) =>(
   {
     type : 'ADD_TECH',
-    tech
+    tech,
+    docs
+
   })
 
 export const removeTech = (learnList)=>(

@@ -4,14 +4,17 @@ import LearnForm from '../components/LearnForm.jsx'
 import {addTech} from '../actions/index.jsx'
 
 const mapStateToProps = (state) =>{
+
   return {
-    tech : state.tech
+
+    tech : state.tech,
+    docs: state.docs
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAdd:(tech) => {dispatch( addTech(tech))}
+    onAdd:(tech,docs) => {dispatch( addTech(tech,docs))}
 
   }
 }

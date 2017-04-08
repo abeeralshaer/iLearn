@@ -27,7 +27,7 @@ class  LearnList extends React.Component {
                       key={learn.tech}
                       tech={learn.tech}
                       docs={learn.docs}
-                      onRemove={() =>this.props.onRemoveTech(learn.tech)}>
+                      onRemove={() =>this.props.onRemoveTech(learn.tech,learn.docs)}>
                   {learn.tech}
                 </Learn>
               )
