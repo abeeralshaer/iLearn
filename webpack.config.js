@@ -1,7 +1,7 @@
 /* eslint-disable */
 var path = require('path')
 module.exports = {
-  entry: './src/client/index.jsx',
+  entry: './src/client/components/App.jsx',
   devServer: {
     inline: true
   },

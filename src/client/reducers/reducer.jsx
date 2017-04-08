@@ -1,9 +1,10 @@
-export default (state = [], action) => {
+export default (state =[{learnList : [{tech:''}]}], action) => {
   switch (action.type){
-    case 'ADD_TECH':
-        return state.concat(action.payload)
-    case 'REMOVE_TECH':
-          return  state
-    default:
-          return state;
-  }}
+  case 'ADD_TECH':
+    return state[0].learnList.push(action.tech)
+  case 'REMOVE_TECH':
+    return  action
+  default:
+    return state
+  }
+}
