@@ -5,13 +5,6 @@ class  LearnList extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      learnList: props.learnList
-
-
-
-    }
-
 
   }
 
@@ -28,7 +21,7 @@ class  LearnList extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {  this.state.learnList.map(function(learn) {
+            {  this.props.learnList.map(function(learn) {
               return (
                 <Learn
                       key={learn.tech}
