@@ -9,7 +9,7 @@ class LearnForm extends React.Component {
       docs:''
     }
 
-    this.onAdd = this.onAdd.bind(this)
+
   }
 
   onAdd(){
@@ -51,7 +51,7 @@ class LearnForm extends React.Component {
         </div>
 
         <div className='form-group'>
-          <button  className='btn btn-default' onClick={this.onAdd()}>
+          <button  className='btn btn-default' onClick={this.onAdd.bind(this)}>
             Add
             </button>
         </div>

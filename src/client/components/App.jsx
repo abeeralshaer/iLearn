@@ -16,14 +16,14 @@ let store = createStore(reducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window._
 const App = (props) =>
   <div>
     <LearnForm addTech={props.onAdd} />
-    <LearnList learnList={props.techs} removeTech={props.onRemove}/>
+    <LearnList learnList={props.techs} onRemoveTech={props.onRemove}/>
   </div>
 
 const render = () => ReactDOM.render(
   <App
     techs={store.getState().techs}
     onAdd={tech => store.dispatch({ type: 'ADD_TECH', payload: tech })}
-    onRemove={name => store.dispatch({ type: 'REMOVE_TECH', payload: name })}
+    onRemove={docs => store.dispatch({ type: 'REMOVE_TECH', payload: docs })}
   />,
   document.getElementById('app')
 )
