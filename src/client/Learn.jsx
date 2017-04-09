@@ -1,7 +1,5 @@
 import React from 'react'
-
 const Learn = (props)=>{
-
   return (<tr>
     <td>{props.tech}</td>
     <td><a href={props.docs}>{props.docs}</a></td>
@@ -13,7 +11,6 @@ const Learn = (props)=>{
       </button>
     </td>
   </tr>)
-
 }
 Learn.propTypes ={
   onRemove:React.PropTypes.func,

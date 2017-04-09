@@ -6,13 +6,12 @@ const techsReducer = (state = [], action) => {
   case 'REMOVE_TECH':
     return state.filter(
         tech =>
-          tech.name !== action.payload
+          tech.tech !== action.payload
       );
   default:
     return state
   }
 }
-
 const reducers = combineReducers({
   techs: techsReducer
 });
@@ -20,7 +19,7 @@ const reducers = combineReducers({
  /* eslint-disable no-underscore-dangle */
 const store = createStore(
    reducers, /* preloadedState, */
-   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()      // eslint-disable-line
   );
 /* eslint-enable */
 export default store;
