@@ -8,7 +8,20 @@ class LearnForm extends React.Component {
       tech :'',
       docs:''
     }
+
+    this.onAdd = this.onAdd.bind(this)
   }
+
+  onAdd(){
+    if (this.state.tech.length && this.state.docs.length) {
+      this.props.addTech(this.state);
+      this.setState({
+        name: '',
+        docs: ''
+      });
+    }
+  }
+
 
 
   render(){
@@ -38,7 +51,7 @@ class LearnForm extends React.Component {
         </div>
 
         <div className='form-group'>
-          <button  className='btn btn-default' onClick={()=>this.props.onAdd(this.state.tech,this.state.docs)}>
+          <button  className='btn btn-default' onClick={this.onAdd()}>
             Add
             </button>
         </div>
@@ -50,7 +63,7 @@ class LearnForm extends React.Component {
 
 LearnForm.propTypes = {
 
-  onAdd : React.PropTypes.func.isRequired
+  addTech : React.PropTypes.func.isRequired
 }
 
 export default LearnForm
