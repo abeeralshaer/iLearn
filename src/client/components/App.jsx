@@ -20,7 +20,7 @@ const render = () => ReactDOM.render(//eslint-disable-line
   <App
     techs={store.getState().techs}
     onAdd={tech => store.dispatch({ type: 'ADD_TECH', payload: tech })}
-    onRemove={docs => store.dispatch({ type: 'REMOVE_TECH', payload: docs })}
+    onRemove={tech => store.dispatch({ type: 'REMOVE_TECH', payload: tech })}
    />,
   document.getElementById('app')//eslint-disable-line
 )

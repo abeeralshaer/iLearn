@@ -1,26 +1,17 @@
-
 import reducer from './reducer.jsx'
-import deepFreeze from 'deep-freeze'
-import test from 'tape'
 
 
 
 
-test('app reducer AddTech',(t) => {
-  const stateBefore = {
-    addTech : false
+it ('action  AddTech adds an object',() => {//eslint-disable-line
+  const techs = [{
+    tech:'book',
+    docs:'book'
+  }]
+  const action = {
+    type: 'ADD_TECH',
+    payload: techs
   }
-  const stateAfter = {
-    addTech : true
-  }
-  deepFreeze(stateBefore)
-  deepFreeze(stateAfter)
 
-  t.deepEqual(reducer({learnList:[{tech:'ff',docs:''}],addedTech:[],addTech:false},{type:'ADD_TECH'}),{addTech:true},
-
-    'addTech should change the addTech to true'
-  )
-
-  t.end()
-
-});
+  expect(reducer([],action)).toEqual(techs)//eslint-disable-line
+})
