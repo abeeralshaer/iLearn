@@ -1,32 +1,37 @@
 import React from 'react' // ← Main React library
 import ReactDOM from 'react-dom' // ← Main react library
-import { Provider } from 'react-redux' //← Bridge React and Redux
 import { createStore, combineReducers } from 'redux'// ← Main Redux library
-import reducer from '../reducers/reducer.jsx' // ← List of Reducers we created
-//Import all components we created earlier
-import RemoveTech from '../container/removeTech.jsx'
-import AddTech from'../container/addTech.jsx'
-import LearnList from './LearnList.jsx'
+import reducer from '../reducers/reducer.jsx'
+import LearnList from './LearnList.jsx' // ← List of Reducers we created
+// import LearnList from './LearnList.jsx'
 import LearnForm from './LearnForm.jsx'
 
 const reducers  = combineReducers({
   techs: reducer
 })
-let store = createStore(reducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(reducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())//eslint-disable-line
 const App = (props) =>
   <div>
     <LearnForm addTech={props.onAdd} />
     <LearnList learnList={props.techs} onRemoveTech={props.onRemove}/>
   </div>
 
-const render = () => ReactDOM.render(
+const render = () => ReactDOM.render(//eslint-disable-line
   <App
     techs={store.getState().techs}
     onAdd={tech => store.dispatch({ type: 'ADD_TECH', payload: tech })}
     onRemove={docs => store.dispatch({ type: 'REMOVE_TECH', payload: docs })}
-  />,
-  document.getElementById('app')
+   />,
+  document.getElementById('app')//eslint-disable-line
 )
 
-render()
+render();
 store.subscribe(render)
+
+App.propTypes = {
+
+  techs:React.PropTypes.array.isRequired,
+  onAdd:React.PropTypes.func.isRequired,
+  onRemove:React.PropTypes.func.isRequired
+
+}
